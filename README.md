@@ -1,6 +1,14 @@
 # dsh-plan-switch
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
+![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
+
 One-click **enter/exit Plan mode** for the DSH web input bar (a quick-click shortcut for `/plan`).
+
+## Screenshot
+
+![dsh-plan-switch plan button in the input bar](assets/plan-button.png)
 
 ## Install
 

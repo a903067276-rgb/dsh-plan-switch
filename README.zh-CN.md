@@ -1,6 +1,14 @@
 # dsh-plan-switch
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
+![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
+
 输入框**一键进/出 Plan 模式**的 DSH web 小插件（`/plan` 的快捷点击）。
+
+## 截图
+
+![dsh-plan-switch 输入框 Plan 按钮](assets/plan-button.png)
 
 ## 安装
 
