@@ -1,18 +1,18 @@
 # dsh-plan-switch
 
-输入框**一键进/出 Plan 模式**的 DSH web 小插件（`/plan` 的快捷点击）。
+One-click **enter/exit Plan mode** for the DSH web input bar (a quick-click shortcut for `/plan`).
 
-## 安装
+## Install
 
 ```bash
 dsh plugin --profile web add "github:a903067276-rgb/dsh-plan-switch#main"
 ```
 
-## 用法
+## Usage
 
-在对话输入框旁出现 Plan 快捷按钮，点击即进入/退出 plan 模式。
+A capsule button appears next to the conversation input bar. Click it to enter or exit plan mode — same as typing `/plan` or `/plan off`.
 
-## 开发
+## Development
 
-- 源码：`lib/index.js`（server 端）、`lib/client.js`（web 端注入）
-- 开发流程：本地改 → push main → `pnpm update` 验证安装
+- Source: `lib/index.js` (server side), `lib/client.js` (web injection)
+- Workflow: edit locally → push to `main` → `pnpm update` to verify the install
