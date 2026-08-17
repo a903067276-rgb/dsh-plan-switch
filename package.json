@@ -1,16 +1,38 @@
 {
   "name": "dsh-plan-switch",
   "version": "0.1.0",
-  "description": "输入框一键进/出 plan 模式（/plan 的快捷点击），全局小插件",
-  "private": true,
+  "description": "One-click enter/exit Plan mode for the DSH web input bar (a quick-click shortcut for /plan)",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
     ".": "./lib/index.js",
     "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
     "./package.json": "./package.json"
   },
+  "files": [
+    "lib",
+    "cordis.patch.yml"
+  ],
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "plan",
+    "web-ui"
+  ],
+  "license": "MIT",
+  "engines": {
+    "dsh": ">=0.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a903067276-rgb/dsh-plan-switch.git"
+  },
   "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
     "client": {
       "inject": [
         "@deepseek-ai/dsh-api-remotes",
@@ -19,5 +41,7 @@
       "platform": "web"
     }
   },
-  "license": "MIT"
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1-rc.1"
+  }
 }

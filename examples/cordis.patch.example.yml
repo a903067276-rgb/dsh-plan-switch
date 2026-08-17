@@ -1,0 +1,11 @@
+# dsh-plan-switch 手动挂载示例（兜底安装路径，仅在没有 `dsh plugin` 命令的环境使用）
+#
+# 追加到 ~/.dsh/cordis.patch.yml 的 insert 列表。
+# 需要先让包名可解析（npm 全局安装的 dsh）：
+#   ln -s <repo> ~/.dsh/profiles/web/node_modules/dsh-plan-switch
+# 官方 bundle 安装（`dsh plugin --profile web add "github:a903067276-rgb/dsh-plan-switch#main"`）
+# 使用仓库根的 cordis.patch.yml，无需本示例。两种方式二选一，详见 docs/install.md。
+
+- insert:
+    - id: plan-switch
+      name: 'dsh-plan-switch'

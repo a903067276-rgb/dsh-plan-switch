@@ -24,3 +24,10 @@ dsh plugin --profile web add "github:a903067276-rgb/dsh-plan-switch#main"
 
 - 源码：`lib/index.js`（server 端）、`lib/client.js`（web 端注入）
 - 开发流程：本地改 → push main → `pnpm update` 验证安装
+
+## 平台支持
+
+| 平台 | 状态 |
+|---|---|
+| macOS | ✅ 全功能实测（开发环境） |
+| Linux / Windows | ⚠️ 架构上预期可用（纯前端按钮，无平台依赖），未实测 |

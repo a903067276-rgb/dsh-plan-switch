@@ -1,0 +1,6 @@
+# dsh-plan-switch：输入框一键进/出 Plan 模式（/plan 快捷点击）
+# 安装方式：软链到 ~/.dsh/profiles/web/node_modules/dsh-plan-switch + 本文件追加 entry
+# 生效方式：重启 dsh web
+- insert:
+    - id: plan-switch
+      name: 'dsh-plan-switch'

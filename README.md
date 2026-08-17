@@ -24,3 +24,10 @@ A capsule button appears next to the conversation input bar. Click it to enter o
 
 - Source: `lib/index.js` (server side), `lib/client.js` (web injection)
 - Workflow: edit locally → push to `main` → `pnpm update` to verify the install
+
+## Platform support
+
+| Platform | Status |
+|---|---|
+| macOS | ✅ fully tested (development environment) |
+| Linux / Windows | ⚠️ expected to work (pure frontend button, no platform dependency), untested |
