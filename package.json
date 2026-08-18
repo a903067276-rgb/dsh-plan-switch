@@ -1,6 +1,6 @@
 {
   "name": "dsh-plan-switch",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "One-click enter/exit Plan mode for the DSH web input bar (a quick-click shortcut for /plan)",
   "type": "module",
   "main": "lib/index.js",
