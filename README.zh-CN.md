@@ -18,7 +18,7 @@ dsh plugin --profile web add "github:a903067276-rgb/dsh-plan-switch#main"
 
 ## 用法
 
-在对话输入框旁出现 Plan 快捷按钮，点击即进入/退出 plan 模式。
+输入框工具行左侧的**清单图标按钮**（官方 dsw 设计风格，跟随深浅色主题），点击进入 plan 模式（等同 `/plan`）。plan 模式进行中按钮自动隐藏——状态由官方 Plan 卡片显示，不会出现重复指示。
 
 ## 开发
 

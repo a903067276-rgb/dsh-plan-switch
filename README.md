@@ -4,7 +4,7 @@
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
-One-click **enter/exit Plan mode** for the DSH web input bar (a quick-click shortcut for `/plan`).
+One-click **enter Plan mode** for the DSH web input bar (a quick-click shortcut for `/plan`).
 
 ## Screenshot
 
@@ -18,7 +18,7 @@ dsh plugin --profile web add "github:a903067276-rgb/dsh-plan-switch#main"
 
 ## Usage
 
-A capsule button appears next to the conversation input bar. Click it to enter or exit plan mode — same as typing `/plan` or `/plan off`.
+A checklist icon button appears at the left end of the input tool row (official DSH design tokens, follows dark/light theme). Click it to enter plan mode — same as typing `/plan`. While plan mode is active the button hides itself: the official plan card takes over the status display, so there is never a duplicated indicator.
 
 ## Development
 
