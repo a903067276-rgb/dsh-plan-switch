@@ -6,6 +6,7 @@
 
 输入框**一键进/出 Plan 模式**的 DSH web 小插件（`/plan` 的快捷点击）。
 
+*非官方项目：社区成员独立开发维护，非 DeepSeek 官方产品。*
 ## 截图
 
 ![dsh-plan-switch 输入框 Plan 按钮](assets/plan-button.png)

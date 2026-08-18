@@ -6,6 +6,7 @@
 
 One-click **enter Plan mode** for the DSH web input bar (a quick-click shortcut for `/plan`).
 
+*Unofficial project: independently developed and maintained by a community member, not an official DeepSeek product.*
 ## Screenshot
 
 ![dsh-plan-switch plan button in the input bar](assets/plan-button.png)
