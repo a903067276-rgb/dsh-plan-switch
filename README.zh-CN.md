@@ -50,7 +50,7 @@ dsh plugin --profile web add "github:a903067276-rgb/dsh-plan-switch#main"
 
 ## 环境要求
 
-- DSH web（`dsh web` 运行）
+- DSH web（≥ 0.1.0-rc.7）（`dsh web` 运行）
 - 无需任何 host 侧配置：host 半为空实现——整个插件就是浏览器侧一个按钮，调用官方 `/plan` 命令，全平台无额外依赖
 
 ## 工作原理

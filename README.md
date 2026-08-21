@@ -49,7 +49,7 @@ A checklist icon button appears at the left end of the input tool row (official 
 
 ## Requirements
 
-- DSH web (run with `dsh web`)
+- DSH web >= 0.1.0-rc.7 (run with `dsh web`)
 - No host-side setup: the host half is a no-op — the whole plugin is a client-side button that runs the official `/plan` command, so nothing extra is required on any platform.
 
 ## How it works
