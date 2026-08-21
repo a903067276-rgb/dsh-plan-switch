@@ -49,13 +49,20 @@ A checklist icon button appears at the left end of the input tool row (official 
 
 ## Requirements
 
-- DSH web >= 0.1.0-rc.7 (run with `dsh web`)
+- DSH web >= 0.1.0-rc.8 (run with `dsh web`) — the current code calls the official `commands.execute` with its 3-argument contract (added in rc.8; rc.6/rc.7 use 2 arguments and reject the call)
+- **Version compatibility**:
+
+| Your DSH version | Install this | Note |
+|---|---|---|
+| 0.1.0-rc.8 and newer (incl. 0.1.1-rc.1) | `main` (v0.3.1+) | Full features |
+| 0.1.0-rc.6 – 0.1.0-rc.7 | `v0.3.0` — `dsh plugin add github:a903067276-rgb/dsh-plan-switch#v0.3.0` | Uses the 2-argument `commands.execute` contract |
+
 - No host-side setup: the host half is a no-op — the whole plugin is a client-side button that runs the official `/plan` command, so nothing extra is required on any platform.
 
 ## How it works
 
 - **Host** (`lib/index.js`): no behavior — this is a pure UI plugin; the client half is discovered through the `dsh.client` declaration in `package.json` (`exports["./client"]`).
-- **Client** (`lib/client.js`): registers the checklist icon button in the `conversation.input.left` seat using official DSW design tokens (follows dark/light theme); reads plan state live through `useProjection("plan")`; clicking executes the official `/plan` command via `ctx.remote.commands.execute(sessionId, "/plan")` — the whole flow stays on the official command chain.
+- **Client** (`lib/client.js`): registers the checklist icon button in the `conversation.input.left` seat using official DSW design tokens (follows dark/light theme); reads plan state live through `useProjection("plan")`; clicking executes the official `/plan` command via `ctx.remote.commands.execute(sessionId, "/plan", [])` — the whole flow stays on the official command chain.
 - **State handling**: the effective plan state mirrors the official PlanChip algorithm (`pending ? !active : active`). While plan mode is active the button returns `null` (hidden — the official plan card owns the indicator, no duplicate); while a toggle is pending the button is disabled so a second click can't reverse the switch; command failures turn the button error-colored with the message in its tooltip.
 
 ## Notes

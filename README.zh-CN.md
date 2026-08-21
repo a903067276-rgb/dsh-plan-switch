@@ -50,13 +50,20 @@ dsh plugin --profile web add "github:a903067276-rgb/dsh-plan-switch#main"
 
 ## 环境要求
 
-- DSH web（≥ 0.1.0-rc.7）（`dsh web` 运行）
+- DSH web（≥ 0.1.0-rc.8）（`dsh web` 运行）——当前代码调用官方 `commands.execute` 的 3 参契约（rc.8 起；rc.6/rc.7 是 2 参，会被拒绝）
+- **版本对照**：
+
+| 你的 DSH 版本 | 装这个 | 说明 |
+|---|---|---|
+| 0.1.0-rc.8 及以上（含 0.1.1-rc.1） | `main`（v0.3.1+） | 全功能 |
+| 0.1.0-rc.6 – 0.1.0-rc.7 | `v0.3.0` — `dsh plugin add github:a903067276-rgb/dsh-plan-switch#v0.3.0` | 2 参 `commands.execute` 契约版本 |
+
 - 无需任何 host 侧配置：host 半为空实现——整个插件就是浏览器侧一个按钮，调用官方 `/plan` 命令，全平台无额外依赖
 
 ## 工作原理
 
 - **Host**（`lib/index.js`）：无行为——纯 UI 插件；client 半通过 `package.json` 的 `dsh.client` 声明被发现（`exports["./client"]`）。
-- **Client**（`lib/client.js`）：`conversation.input.left` 插槽注册清单图标按钮（官方 dsw 设计 token，跟随明暗主题）；通过 `useProjection("plan")` 实时读取 plan 状态；点击经 `ctx.remote.commands.execute(sessionId, "/plan")` 执行官方 `/plan` 命令——全流程走官方命令链。
+- **Client**（`lib/client.js`）：`conversation.input.left` 插槽注册清单图标按钮（官方 dsw 设计 token，跟随明暗主题）；通过 `useProjection("plan")` 实时读取 plan 状态；点击经 `ctx.remote.commands.execute(sessionId, "/plan", [])` 执行官方 `/plan` 命令——全流程走官方命令链。
 - **状态处理**：有效 plan 状态照抄官方 PlanChip 算法（`pending ? !active : active`）。plan 模式进行中按钮返回 `null`（隐藏——指示归官方 Plan 卡片，不重复）；切换 pending 期间按钮禁用，防第二次点击反向；命令失败按钮变错误色，错误信息显示在 tooltip。
 
 ## 注意事项
