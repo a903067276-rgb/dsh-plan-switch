@@ -50,13 +50,12 @@ dsh plugin --profile web add "github:a903067276-rgb/dsh-plan-switch#main"
 
 ## 环境要求
 
-- DSH web（≥ 0.1.0-rc.8）（`dsh web` 运行）——当前代码调用官方 `commands.execute` 的 3 参契约（rc.8 起；rc.6/rc.7 是 2 参，会被拒绝）
+- DSH web（≥ 0.1.0-rc.6）（`dsh web` 运行）——代码自适应：先按 rc.8+ 的 3 参契约调用官方 `commands.execute`，rc.6/rc.7 上自动降级为 2 参
 - **版本对照**：
 
 | 你的 DSH 版本 | 装这个 | 说明 |
 |---|---|---|
-| 0.1.0-rc.8 及以上（含 0.1.1-rc.1） | `main`（v0.3.1+） | 全功能 |
-| 0.1.0-rc.6 – 0.1.0-rc.7 | `v0.3.0` — `dsh plugin add github:a903067276-rgb/dsh-plan-switch#v0.3.0` | 2 参 `commands.execute` 契约版本 |
+| 0.1.0-rc.6 及以上（含 0.1.1-rc.1/rc.2） | `main`（v0.3.2+） | 全功能（3 参调用，rc.6/rc.7 自动降级 2 参） |
 
 - 无需任何 host 侧配置：host 半为空实现——整个插件就是浏览器侧一个按钮，调用官方 `/plan` 命令，全平台无额外依赖
 
