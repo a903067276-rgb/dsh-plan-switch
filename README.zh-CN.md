@@ -52,10 +52,13 @@ dsh plugin --profile web add "github:a903067276-rgb/dsh-plan-switch#main"
 
 - DSH web（≥ 0.1.0-rc.6）（`dsh web` 运行）——代码自适应：先按 rc.8+ 的 3 参契约调用官方 `commands.execute`，rc.6/rc.7 上自动降级为 2 参
 - **版本对照**：
+- **维护策略**：本插件将持续跟随 DSH 最新版本演进；对旧版 DSH 的兼容仅是尽力而为、不保证长期有效。
 
 | 你的 DSH 版本 | 装这个 | 说明 |
 |---|---|---|
-| 0.1.0-rc.6 及以上（含 0.1.1-rc.1/rc.2） | `main`（v0.3.2+） | 全功能（3 参调用，rc.6/rc.7 自动降级 2 参） |
+| 0.1.0-rc.6 及以上（含 0.1.1-rc.1/rc.2） | `main`（v0.3.2+） | **尽力兼容**——3 参调用、rc.6/rc.7 自动降级 2 参（本地实测 rc.6/rc.8，不保证） |
+| 0.1.0-rc.8 及以上（保守） | `v0.3.1` — `dsh plugin add github:a903067276-rgb/dsh-plan-switch#v0.3.1` | 无降级逻辑的最后一版 |
+| 0.1.0-rc.6 – 0.1.0-rc.7（保守） | `v0.3.0` — `dsh plugin add github:a903067276-rgb/dsh-plan-switch#v0.3.0` | 2 参 `commands.execute` 契约 |
 
 - 无需任何 host 侧配置：host 半为空实现——整个插件就是浏览器侧一个按钮，调用官方 `/plan` 命令，全平台无额外依赖
 

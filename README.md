@@ -51,10 +51,13 @@ A checklist icon button appears at the left end of the input tool row (official 
 
 - DSH web >= 0.1.0-rc.6 (run with `dsh web`) — the code calls `commands.execute` with the 3-argument contract (rc.8+) and auto-degrades to the 2-argument one on rc.6/rc.7
 - **Version compatibility**:
+- **Maintenance policy**: this plugin keeps evolving with the latest DSH releases; compatibility with older DSH versions is best-effort only and not guaranteed going forward.
 
 | Your DSH version | Install this | Note |
 |---|---|---|
-| 0.1.0-rc.6 and newer (incl. 0.1.1-rc.1/rc.2) | `main` (v0.3.2+) | Full features (3-arg call, auto-degrade to 2 args on rc.6/rc.7) |
+| 0.1.0-rc.6 and newer (incl. 0.1.1-rc.1/rc.2) | `main` (v0.3.2+) | **Best effort** — 3-arg call with auto-degrade to 2 args on rc.6/rc.7 (verified locally on rc.6/rc.8, not guaranteed) |
+| 0.1.0-rc.8 and newer (conservative) | `v0.3.1` — `dsh plugin add github:a903067276-rgb/dsh-plan-switch#v0.3.1` | Last build without the degrade logic |
+| 0.1.0-rc.6 – 0.1.0-rc.7 (conservative) | `v0.3.0` — `dsh plugin add github:a903067276-rgb/dsh-plan-switch#v0.3.0` | 2-argument `commands.execute` contract |
 
 - No host-side setup: the host half is a no-op — the whole plugin is a client-side button that runs the official `/plan` command, so nothing extra is required on any platform.
 
