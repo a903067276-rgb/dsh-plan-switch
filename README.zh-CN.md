@@ -57,6 +57,7 @@ dsh plugin --profile web add "github:a903067276-rgb/dsh-plan-switch#main"
 | 你的 DSH 版本 | 装这个 | 说明 |
 |---|---|---|
 | 0.1.0-rc.6 及以上（含 0.1.1-rc.1/rc.2） | `main`（v0.3.2+） | **尽力兼容**——3 参调用、rc.6/rc.7 自动降级 2 参（本地实测 rc.6/rc.8，不保证） |
+| **0.1.5-rc.1** | `main`（v0.3.2+） | ✅ **实测**：官方 slot 目录核实 `conversation.input.left` 仍在（`occupants: []`、`replaceRisk: none`），无需迁移；官方 Plan 胶囊只负责「退出」，未激活入口官方 README 明文说不做（本插件补的正是这个位） |
 | 0.1.0-rc.8 及以上（保守） | `v0.3.1` — `dsh plugin add github:a903067276-rgb/dsh-plan-switch#v0.3.1` | 无降级逻辑的最后一版 |
 | 0.1.0-rc.6 – 0.1.0-rc.7（保守） | `v0.3.0` — `dsh plugin add github:a903067276-rgb/dsh-plan-switch#v0.3.0` | 2 参 `commands.execute` 契约 |
 

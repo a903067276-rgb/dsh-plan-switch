@@ -56,6 +56,7 @@ A checklist icon button appears at the left end of the input tool row (official 
 | Your DSH version | Install this | Note |
 |---|---|---|
 | 0.1.0-rc.6 and newer (incl. 0.1.1-rc.1/rc.2) | `main` (v0.3.2+) | **Best effort** — 3-arg call with auto-degrade to 2 args on rc.6/rc.7 (verified locally on rc.6/rc.8, not guaranteed) |
+| **0.1.5-rc.1** | `main` (v0.3.2+) | ✅ **Verified**: the official slot catalog still declares `conversation.input.left` (`occupants: []`, `replaceRisk: none`) — no migration needed; the official Plan chip only *exits* plan mode, and the official README states there is deliberately no inactive affordance (which this plugin provides) |
 | 0.1.0-rc.8 and newer (conservative) | `v0.3.1` — `dsh plugin add github:a903067276-rgb/dsh-plan-switch#v0.3.1` | Last build without the degrade logic |
 | 0.1.0-rc.6 – 0.1.0-rc.7 (conservative) | `v0.3.0` — `dsh plugin add github:a903067276-rgb/dsh-plan-switch#v0.3.0` | 2-argument `commands.execute` contract |
 
