@@ -28,7 +28,10 @@ The checklist icon button at the left end of the input tool row (official DSH de
 Official bundle install (one line):
 
 ```sh
+# DSH 0.1.7 and later:
 dsh plugin --profile web add "github:a903067276-rgb/dsh-plan-switch#main"
+# DSH 0.1.5 and older (this release needs 0.1.7+):
+# dsh plugin --profile web add "github:a903067276-rgb/dsh-plan-switch#v0.3.2"
 ```
 
 Restart `dsh web` after installing (bundle layers are composed at startup). Requires pnpm on PATH (`dsh plugin` forwards to pnpm).

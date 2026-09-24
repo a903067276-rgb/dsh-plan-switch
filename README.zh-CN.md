@@ -28,7 +28,10 @@
 官方 bundle 一行安装：
 
 ```sh
+# DSH 0.1.7 及以后：
 dsh plugin --profile web add "github:a903067276-rgb/dsh-plan-switch#main"
+# DSH 0.1.5 及更早（本版需要 0.1.7+）：
+# dsh plugin --profile web add "github:a903067276-rgb/dsh-plan-switch#v0.3.2"
 ```
 
 装完重启 `dsh web`（bundle 层在启动时合成）。需要 pnpm（`dsh plugin` 是 pnpm 转发器）。
