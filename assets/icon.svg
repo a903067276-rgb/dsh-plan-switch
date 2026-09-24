@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-label="dsh-plan-switch">
+  <rect x="1" y="1" width="22" height="22" rx="5.5" fill="#D97706"/>
+  <rect x="2.6" y="7.8" width="18.8" height="8.4" rx="4.2" fill="none" stroke="#fff" stroke-width="1.7"/>
+  <g fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.9">
+    <path d="M6 10.3h5.6"/>
+    <path d="M6 13.7h3"/>
+  </g>
+  <circle cx="17" cy="12" r="2.7" fill="#fff"/>
+</svg>

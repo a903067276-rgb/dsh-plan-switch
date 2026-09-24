@@ -1,18 +1,22 @@
 {
   "name": "dsh-plan-switch",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "One-click enter/exit Plan mode for the DSH web input bar (a quick-click shortcut for /plan)",
+  "icon": "assets/icon.svg",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
     ".": "./lib/index.js",
     "./client": "./lib/client.js",
     "./cordis.patch.yml": "./cordis.patch.yml",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./locale/*": "./locale/*"
   },
   "files": [
     "lib",
-    "cordis.patch.yml"
+    "cordis.patch.yml",
+    "assets",
+    "locale"
   ],
   "keywords": [
     "dsh",
@@ -42,6 +46,7 @@
     }
   },
   "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.1.7-rc.1 <0.2.0",
     "@deepseek-ai/cordis": "^4.0.1-rc.1"
   }
 }
