@@ -10,6 +10,15 @@ A one-click **enter/exit Plan mode** button for the DSH web input bar (a quick-c
 
 *Unofficial project: independently developed and maintained by a community member, not an official DeepSeek product.*
 
+> ## ⚠️ DISCONTINUED (2026-10-01)
+>
+> **DSH 0.2 already ships Plan mode entry points**: pick 「计划」in the composer's `+` Command menu, or type `/plan`; exit with the official 「计划」status badge in the composer. This plugin only saved you one click (plus pending-guard / auto-hide), so the official build leaves no capability gap — the author has uninstalled it and stopped maintaining it.
+>
+> - **Last release: `v0.4.1`** (verified on DSH 0.2.0-rc.2). No further fixes or compatibility work.
+> - It has been removed from the author's three profiles (desktop / web / sandbox). You may keep installing it, but compatibility going forward is at your own risk.
+> - What to use instead: the `/plan` command, or 「计划」in the composer `+` menu; exit via the 「计划」badge in the composer.
+> - Thanks to everyone who used it.
+
 ## Screenshot
 
 ![dsh-plan-switch plan button in the input bar](assets/plan-button.png)
@@ -58,7 +67,7 @@ A checklist icon button appears at the left end of the input tool row (official 
   - ✅ **DSH 0.2.0-rc.1 — verified compatible**: the peer range now covers both lines (`^0.1.7-rc.1 || ^0.2.0-rc.1`) and `dsh.compatibility.dshReleases` adds `"0.2.0-rc.1": "compatible"` — verified on a real 0.2.0-rc.1 host and a shadow instance. Since 0.2 the host gates profile bundles on peer compatibility and **skips the whole bundle** when the declared range misses the running host, so this range is what keeps the plugin loading.
   - ⚠️ **DSH 0.1.5 and older — install the previous tag `v0.3.2`**: that line keeps the old behavior and uses no 0.1.7-only API.
   - ⛔ **Old plugin releases (up to `v0.3.2`) are not supported on 0.1.7** — no known behavior regression — it only lacks the localized plugin metadata. Upgrade the plugin together with the host.
-- **Maintenance policy**: this plugin keeps evolving with the latest DSH releases; compatibility with older DSH versions is best-effort only and not guaranteed going forward.
+- **Maintenance policy**: **discontinued (2026-10-01)** — no longer tracks new DSH releases; compatibility of the existing releases with older DSH versions is best-effort only and not guaranteed going forward.
 
 | Your DSH version | Install this | Note |
 |---|---|---|
